@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.zy.demonew">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".modelview.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".modelview.BasicFuncActivity" />
+        <activity android:name=".modelview.BaseObservableObjectActivity" />
+        <activity android:name=".modelview.ObservableFieldObjectActivity" />
+        <activity android:name=".modelview.ObservableCollectionActivity" />
+        <activity android:name=".modelview.ListViewActivity" />
+        <activity android:name=".modelview.RecyclerViewActivity" />
+
+        <activity android:name=".viewmodel.LoginActivity" />
+    </application>
+
+</manifest>

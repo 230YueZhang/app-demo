@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">demoNew</string>
+    <string name="sample_title_basic">BasicFunction</string>
+    <string name="sample_title_baseobsvbo">BaseObservableObject</string>
+    <string name="sample_title_observablefields">ObservableFieldsObject</string>
+    <string name="sample_title_observablecollections">ObservableCollectionsObject</string>
+    <string name="sample_title_listview">ListViewActivity</string>
+    <string name="sample_title_recyclerView">RecyclerViewActivity</string>
+    <string name="sample_title_login">LoginActivity</string>
+
+    <string name="ageFormat">Age: %1$s</string>
+
+    <string name="colorPrimary">#3F51B5</string>
+    <string name="colorAccent">#FF4081</string>
+</resources>
