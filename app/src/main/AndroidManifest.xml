@@ -23,7 +23,7 @@
         <activity android:name=".modelview.ListViewActivity" />
         <activity android:name=".modelview.RecyclerViewActivity" />
 
-        <activity android:name=".viewmodel.LoginActivity" />
+        <activity android:name=".twoway.LoginActivity" />
     </application>
 
 </manifest>

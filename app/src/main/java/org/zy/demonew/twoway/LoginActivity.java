@@ -1,21 +1,18 @@
-package org.zy.demonew.viewmodel;
+package org.zy.demonew.twoway;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.util.Log;
 
 import org.zy.demonew.R;
 import org.zy.demonew.databinding.ActivityLoginBinding;
-import org.zy.demonew.viewmodel.action.LoginAction;
-import org.zy.demonew.viewmodel.model.User;
+import org.zy.demonew.twoway.action.LoginAction;
+import org.zy.demonew.twoway.model.User;
 
-import static org.zy.demonew.viewmodel.Constants.LOGIN_INFO;
+import static org.zy.demonew.twoway.Constants.LOGIN_INFO;
 
 public class LoginActivity extends AppCompatActivity implements LoginAction {
     private ActivityLoginBinding activityLoginBinding;
@@ -79,7 +76,7 @@ public class LoginActivity extends AppCompatActivity implements LoginAction {
 
     @Override
     public void onLogin(User user) {
-        Log.e("--zy--", "name: " + user.name.get() + " password: " + user.password.get() + " remember: " + user.rememberPsw.get());
+        Log.e("--zy--", "name: " + user.name.get() + " password: " + user.password.get() + " remember: " + user.rememberPsw.get()+" and do login");
         user.afterLogin(user);
     }
 

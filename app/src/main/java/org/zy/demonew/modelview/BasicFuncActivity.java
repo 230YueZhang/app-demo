@@ -38,13 +38,14 @@ public class BasicFuncActivity extends AppCompatActivity {
                 activityBasicBinding.setUser(user);
             }
         });
-
+        activityBasicBinding.included.setUser(user);
         activityBasicBinding.viewstub.setOnInflateListener(new ViewStub.OnInflateListener() {
             @Override
             public void onInflate(ViewStub stub, View inflated) {
-                ListItemBinding binding = DataBindingUtil.bind(inflated);
-                User user = new User("Zhang", "Yue");
-                binding.setUser(user);
+                //如果在xml里bind对象之后这里的重新绑定操作是没用的
+//                ListItemBinding binding = DataBindingUtil.bind(inflated);
+//                User user = new User("Zhang", "San");
+//                binding.setUser(user);
             }
         });
         inflateViewStub();

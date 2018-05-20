@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -24,8 +25,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
@@ -45,11 +46,11 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@{user.firstName!=null ? @string/colorPrimary : @string/colorAccent}"
                 android:onClick="@{handler.onClickLastName}"
                 android:onTextChanged="@{handler.onTextChanged}"
                 android:padding="20dp"
                 android:text="@{user.lastName}"
-                android:background="@{user.firstName!=null ? @string/colorPrimary : @string/colorAccent}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -58,9 +59,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{()->presenter.onSaveClick(user)}"
                 android:padding="20dp"
                 android:text="@{MyStaticHandler.getNickName(user)}"
-                android:onClick="@{()->presenter.onSaveClick(user)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
@@ -75,10 +76,10 @@
 
             <TextView
                 android:id="@+id/second_btn"
-                android:text="click me to change Binding obj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
+                android:text="click me to change Binding obj"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
@@ -87,12 +88,20 @@
         <ViewStub
             android:id="@+id/viewstub"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout="@layout/list_item"
-            android:layout_height="wrap_content" />
+            bind:user="@{user}" />
+
+        <include
+            android:id="@+id/included"
+            layout="@layout/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:user="@{user}" />
 
         <TextView
             android:layout_width="match_parent"
-            app:textAddChars='@{user.firstName}'
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:textAddChars='@{user.firstName}' />
     </LinearLayout>
 </layout>

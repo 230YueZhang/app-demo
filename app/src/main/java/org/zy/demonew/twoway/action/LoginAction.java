@@ -1,8 +1,6 @@
-package org.zy.demonew.viewmodel.action;
+package org.zy.demonew.twoway.action;
 
-import android.view.View;
-
-import org.zy.demonew.viewmodel.model.User;
+import org.zy.demonew.twoway.model.User;
 
 public interface LoginAction {
     void onLogin(User user);

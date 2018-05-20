@@ -6,11 +6,11 @@
 
         <variable
             name="user"
-            type="org.zy.demonew.viewmodel.model.User" />
+            type="org.zy.demonew.twoway.model.User" />
 
         <variable
             name="login"
-            type="org.zy.demonew.viewmodel.action.LoginAction" />
+            type="org.zy.demonew.twoway.action.LoginAction" />
 
     </data>
 

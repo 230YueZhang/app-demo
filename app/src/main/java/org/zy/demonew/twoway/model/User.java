@@ -1,4 +1,4 @@
-package org.zy.demonew.viewmodel.model;
+package org.zy.demonew.twoway.model;
 
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
@@ -40,6 +40,9 @@ public class User implements Parcelable {
         }
     }
 
+    /**
+     * store user info
+     */
     public void storeUserInfo(){
 
     }

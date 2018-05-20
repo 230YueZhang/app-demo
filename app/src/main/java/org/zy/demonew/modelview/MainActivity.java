@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import org.zy.demonew.R;
-import org.zy.demonew.viewmodel.LoginActivity;
+import org.zy.demonew.twoway.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
